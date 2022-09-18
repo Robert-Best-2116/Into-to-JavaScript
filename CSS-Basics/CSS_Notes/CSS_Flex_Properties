@@ -1,0 +1,166 @@
+
+
+Flex-Why We Use It
+    the diffrence between usuing flex compaired to inline block is that when usuing wrighting code with inline block formatting, 
+    the space inbetween our divs or other speratators will be counted, so literally the spaces ______ for illustration lines are added
+    we can remove this ghost spacing by removing the spaces in our code, which makes it look shitty, or by usuing the flex formatting in
+    css for the parent container. 
+
+    the Disiplay Flex is only applied to the parent container "div"
+
+        display: flex; 
+
+    -Note, the align-items; center; will prevent the columbs from stretching (inherting the height of the parent container div)
+
+    there are also other flex options such as flex-start, flex-end, as well as others, attached is a link with a guide and explination
+
+        https://css-tricks.com/snippets/css/a-guide-to-flexbox/#:~:text=flex%2Dstart%20(default)%3A%20items,of%20the%20writing%2Dmode%20direction.
+
+
+
+Justfiying Content (moving it around in a container)
+
+    Flex can also be used to poisiton smaller elements 9like images or boxes) within a larger element. Properties like align-items and justify-content can be used to position the elements exzactley where we want them within some larger content. 
+
+    We apply the justify-content property to the parent element to affect the child element to reposistion the content
+
+        Step 1. applying display flex.
+            when applying display flex the images will appear distorted, that is the normal course and will be fixed in step 2.
+
+                display; flex;
+
+        Step 2. fixing the stretch. 
+            when applying the align items tag (align-items) will fix the stretch. 
+
+                align-items: center;
+
+        Step 3. justfiying content-(making it pretty)
+            last step we use is to make it pretty! we do that with the justify content tag (justify-content: insert_styling_here)
+
+                justify-content: flex-start; (puts content to the left)
+
+                justify-content: center; (puts content in the center)
+
+                justify-content: flex-end; (puts content all the way to the right)
+
+                justify-content: space-between;  (spaces content apart, no room at ends)
+
+                justify-content: space-evenly; (spaces content apart, including ends)
+
+                justify-content: space-around; (spaces content apart, very similar to space-evenly)
+
+            
+            Another Link! for more info
+                https://css-tricks.com/almanac/properties/j/justify-content/ 
+
+
+                
+Flex Shorthand 
+    One of the most usefull things about short is that we can use the display flex short hand display;flex; this property combines flex-grow, flex-shrink, flex-basics and creates an easy way for us to create columns in our layout. 
+
+    ex of flex: 1;
+        HTML 
+            <div class="row">
+            <div class="col">Column</div>
+            <div class="col">Column</div>
+            </div>
+
+        CSS
+            .row {
+            display: flex;
+            }
+            .col {
+            flex: 1;
+            padding: 20px;
+            margin: 10px;
+            background-color: lightcyan;
+            }
+
+
+    Think of each elelment with flex 1 as having one slice of pie, if in another column we have flex; 2; it will take two slices of the total "pie". 
+
+    Butttt what happens if we mixed in a div with the col-2 class? what about classes with flex:3; or higher? 
+
+        .col-2 {
+        flex: 2;
+        padding: 20px;
+        margin: 10px;
+        background-color: palegreen;
+        }
+
+    when we mix how many slices of pie each of our culuns asks for then well be able to mix in some larger columns, in those cases we are going to add up the slices that are being asked for and use that as the basis for deciding the fraction of the row each column will recieve. ex if there are three columns and there each equal the flex would simply be flex:1; if its two columns but one of them needs to take up two spaces instead of one then one would be flex: 2; and the other flex: 1; 
+
+
+
+    Flex Direction
+
+        Flex-Direction defines the direction items are placed in the container and accepts the following values:
+            Row: items are placed the same as the text direction.
+            Row-Reverse: items are placed opposite to the text direction.
+            Column: items are placed top to bottom.
+            Column-reverse: items are placed bottom to top. 
+
+
+
+    Order
+
+        Sometimes reversing the row or fcolum order of a container is not enough, in thease cases we can apply the order property to individual terms, by default items have a value of zero, but we can use this property to set it to a positive or negative interger value 
+            ex (-2, -1, 0, 1, 2)
+                .yellow {
+                    order: 1;
+                }
+
+            this shifts the yellow object over one to the right. 
+
+
+    Align Self
+        Another property you can apply to indivudal items is align-self. this property accepts the same values as align-items and its value for the spesific item. 
+
+            flex-start
+            flex-end
+            center
+            baseline
+            stretch
+
+                ex
+                    align-self: flex-end;
+
+
+
+    Flex-Wrap
+        Flex wrap determines whether flex items are forced on a single line or can be wrapped on multiple lines
+
+            nowrap: every item is fit onto a single line
+            wrap: items wrap around to additional lines
+            wrap-reverse: items wrap around to addtional lines in reverse
+
+    
+    
+    Flex-Flow
+        flex-flow combines the two properties of flex-direciton and flex wrap, this property accepts the value of two propertys seperated by a space with flex direction set first 
+
+        Ex
+            flex-flow: column wrap
+
+
+
+    Align-Content
+        Align content is used to set how multiple lines are placed apart from each other, it is diffrent from align items because it determines the spacing between the items while align items detemrines how the items as a whole are aligned within the container, when there is only one line align-content has no effect
+
+        flex-start: lines are packed at the top of the container
+        flex-end lines are packed at the bottom of the container
+        center: lines are packed at the verticl center of the container. 
+        space-between: lines display with equal spacing between them
+        space-around: lines display with equal spacing around them
+        stretch: lines are stretched to fit the container
+
+
+
+
+
+    link for flex shorthand examples and information
+        https://css-tricks.com/understanding-flex-grow-flex-shrink-and-flex-basis/
+
+
+
+

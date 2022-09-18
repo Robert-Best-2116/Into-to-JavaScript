@@ -1,0 +1,133 @@
+CSS Basics
+
+
+
+Selecting an element 
+
+EX: selecting h1 tags and all paragraphs
+
+h1 {color: red;}
+
+
+p {text-align: center;}
+-Note this will select all paragraphs to be centered as there is no class
+
+
+Selecting A Class inside of an Element 
+
+EX: showing how to center text in a paragrah as well as change the text of one spesific line of code, 
+    to do so use the . before the class name
+
+HTML Code
+<p class="is-centered">This text should be center aligned</p>
+<p>This text should remain left-aligned</p>
+<p class="is-red">This text should be red</p>
+
+CSS Code
+
+.is-centered {text-align: center;}
+
+.is-red {color: red;}
+
+
+
+
+Selecting an :indeterminate
+
+ex: 
+-Note only use one id as it is extreemly spesific and will only work on the first id found with that name
+
+HTML code
+
+Use the id="name your going to use" inside of the element 
+
+CSS code
+
+use the # followed by the name of the id tag
+
+
+
+
+Advanced Selectors
+
+The Wildcard *
+    Selects all of the elements 
+
+    Ex: selecing all of the outlines of ever element on the page 
+    * {outline: 1px solid red;}
+
+    it would cause all of the outlines on the entire page to become red 
+
+
+
+Selecting Elements inside of another Element 
+
+    EX-In this code we are going to select the paragraph (p) inside of the class quote, and change the color and font. 
+    we do this in css by usuing the .name of the class, and following it with the element we would like to select inside of the class so p 
+
+    HTML Code Example
+                <p>This is a quote about CSS</p>
+            <div class="quote">
+                <p>"CSS is like chess. You learn the basics in a day and spend a lifetime mastering it."</p>
+            </div>
+            <p>Chris Coyier (css-tricks.com)</p>
+
+
+                CSS Code Example
+                .quote p {color: darkslategrey; font-style: italic;}
+
+
+
+
+                Direct Descendant Selector >
+                    Selects only the element directley below the element but not other children elements, 
+
+                    HTML Code Example 
+                    <div class="header">
+                <img src="brand-img.png" alt="brand image">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#" class="cart">
+                    <img src="cart.png" alt="cart-icon">
+                    <span>Cart (2)</span>
+                </a>
+            </div>
+
+
+            Css Code Example
+            .header > img {height: 50px;}
+
+        the > will only select the image but not anything else inside of the class of header. including the other image, which has the same element tag. 
+
+
+
+
+
+The Attrubute Selector [  ]
+
+    This is used for styling to similar elelemts that rely upon the same attrutubte for how they behave.
+
+        Example- if we are going to change the styling of two elements that both make use of the imput tag, without usuing classes
+
+    
+        HTML code example 
+
+                <form action="/process" method="post">
+                <input type="text" name="username" value="Rebecca">
+                <input type="submit" value="Enter Username">
+            </form>
+    
+
+        CSS Code Example
+
+                input {padding: 5px;border-color: rebeccapurple;}
+
+                input[type="text"] {border: none;border-bottom: 2px solid rebeccapurple;}
+
+                input[type="submit"] {color: white;background-color: rebeccapurple;}
+                
+
+    By usuing the [ ] we have selected the spesific elements inside of a tag by name my assumption is that it would select every single input type="text" and input type="submit"
+
+
+    

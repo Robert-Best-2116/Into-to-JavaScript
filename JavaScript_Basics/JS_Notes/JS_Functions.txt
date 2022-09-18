@@ -1,0 +1,88 @@
+
+
+Functions!!!!!
+
+    up to this point our code is executed from top to bottom and everything is executed immediatley, with functions we are able to write a block of code that will only be executed when we call on it, this means we are able to call on it as many times as we need. lets look at the syntax ofa function
+
+        function name_of_function (){
+            da code!!!! to be executed
+        }
+
+    so if we want to create a counter code into our function we will have to give this set of steps a name and we can recall it whenever we need.
+
+        function counter () {
+            for(var num = 0; num <= 5; num ++){
+                    console.log(num);
+            }
+        }
+    
+    however as it stands our counter is not being run, that is because it hasent been called. functions are like recipies, once we have the recipie for cookies we know how to make the cookies but that dosent mean we have cookies immediatey. the function will have to be called/invoked
+
+    we call or invoke a function we call it by its name!!! digital wizzardy!! we do that by wrighting its name and adding ()
+
+    name_of_function();
+
+    so we would call our example function like so
+
+
+        function counter() {    
+            for (var num = 0; num <= 5; num++) {        
+                console.log(num);    
+            }
+        }
+        counter();    // run the function
+        counter();    // run the function again
+
+        functions can be called upon as many times as we would like, meaning we dont have to write the function repeatedly woot!
+
+
+    
+    Adding Parameters
+
+        Functions are usefull but there even better when were able to send in diffrent values so that the same code runs but varries depending upon our input, we can indicate that a functio nrequires input by specifiying parameters in the parenthesies next to the functions name, then when we call on the function we pass in arguments or actuall values to be used in the function, spposed we wanted the same counting functionality but we wanted to start at a diffrent number every time
+
+            ex
+                function counter(startNum) {    //The function is expecting some PARAMETER in order to run
+                    for (var num = startNum ; num >= 0 ; num--) {        
+                        console.log(num);    
+                    }
+                }
+                counter(6);    // Passing in an ARGUMENT of 6, the console would display: 6, 5, 4, 3, 2, 1, 0
+                counter(3);    // Passing in an ARGUMENT of 3, the console would display: 3, 2, 1, 0
+
+        with this block of code we can call this function with differnt imputs and see the diffrent results in the console.log 
+        console.log is usefull because it alows us to see what the function is doing on the programmers side of the code but it dosent do anything other than print it for us to see. it is a usefull tool for debugging. 
+
+    
+    Return VS Console.Log!!!-the showdown
+
+        now that we know about functions comes the next big step return!!!!!!!!!!!!!!!!
+
+        the return statment saves information, supposed that we have a function that when given a number created an arrray with values from 0 to that number. 
+
+            ex
+                function createArray(num) {        
+                    var newArray = [];       
+                    for (var i = 0; i <= num; i++) {                
+                        newArray.push(i);        
+                    }
+                }
+                createArray(5);
+                //The newArray only exists inside of the function.  Out here it no longer exists!
+
+
+        This example dosent actually save the array that weve created, itll run but then dissapear once the code finishes. 
+
+        a return does two things, it returns/saves the true output of the function, and it also serve sto end the function immediatley
+
+            ex
+                function createArray(num) {        
+                    var newArray = [];        
+                    for (var i = 0; i <= num; i++) {                
+                        newArray.push(i);        
+                    }        
+                    return newArray;        // added the return statement
+                }
+                var y = createArray(5);        // now y is the variable that is calling on createArray
+
+                

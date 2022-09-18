@@ -1,0 +1,143 @@
+
+
+All web layouts are accomplished with block elements, the most frequenly used block element is the
+<div></div> element, which creates rectangualr areas which all content fits, they only have three rules
+
+    1. total area-the space an element occupies and afffects
+    2. float, clear and overflow
+    3. nested elements
+
+
+
+Total Area 
+
+    total area is the total width is how much horizontal space a block occupies. this includes the block's margin, border and padding
+    Calculating width, padding, and margin is often the biggest challenge for designers, but its easy to see how they work usuing
+    the box model
+
+    the box model consists of the properties margin, border and padding.
+        Margin- outside of the block elements, used to seperate a block from things around it
+        Padding- within the box elements, used to move a blocks content away from its edges
+        Border- Outline of the box elements
+
+
+    you may specifically set the margin padding or border of any side of an element.
+
+        div{
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+
+    Short hand Property- usuing the values in one line of code 
+
+    div{
+        padding-top: 25px;
+        padding-right: 50px;
+        padding-bottom: 75px;
+        padding-left: 100px;
+      }
+
+    is equavalant to 
+
+    div{
+        padding: 25px 50px 75px 100px;
+      }
+
+      first number equals top, second right, third bottom, fourth is padding-left
+
+
+
+According to the box model, the total width of an element is margin x2 + border x2 + padding x2 + content width. 
+
+when calculating height you need to take into account that vertical margins collapse, ex, there is no bottom of the box only
+the top. 
+
+When the vertical margins of two elements are touching, only the margin of the element with the largest margin value will
+remain, the other will be collapsed to zero. 
+
+
+Alternatives to this rule are as follows
+
+      floated elements
+      
+      absolutely positioned elements
+
+      inline-block elements
+
+      elements with overflow property sent to anything other than visible (they do not collapse margins with their children.)
+
+      cleared elements (they do not collapse their top margins with their parent blocks bottom margin.)
+
+
+
+
+Inline and Block Styling
+
+    Some html elements allow other elements next to them and others take up all of the space next to them regardless of the contentammount, the ones that max our the space are called block elements and the ones that share space are called inline elements
+
+    Every html element has a default display property of block or inline, but we are able to change their script via consists
+
+        h1, h2 {
+            display: inline;
+            background-color: cyan;
+        }
+        label, input {
+            display: block;
+        }
+        
+
+    If we wish to be able to change the width and allow the elements to be next to one anotherwe have a third option called inline-block 
+    it alows us to add a chosen width to normally inline elements.
+
+        h1, h2 {
+            display: inline-block;
+            background-color: cyan;
+            width: 200px; /* this will work! */
+        }
+        
+    we use this to create columns on our webpage with the same box styling. 
+
+    HTML Example
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+
+
+    Css Example
+        p {
+            display: inline-block;
+            width: 160px;
+            box-sizing: border-box;
+            padding: 20px;
+            background-color: lightcyan;
+            margin: 10px;
+        }
+        
+
+    It is good pratice to use a div or body tag to insure that the width of the columns will fit inside their
+    parent element. inline-block itself will not ensure the elements are the size we want. 
+
+
+    Not all columns will have the same amount of content, in inline-block content aligns at the base of the container, 
+    we adjust this by applying the vertical-align: top setting
+
+        vertical-align: top 
+
+    
+    We can change the display of tags that normally display as inline elements such as anchor tags, by applying the
+    display: block; stying tag
+
+        a {
+            text-decoration: none;
+            color: darkslategrey;
+            background-color: blanchedalmond;
+            padding: 10px;
+            margin: 10px;
+            display: block;
+        }
+
+
+Block, inline, and inline-block are the basic ways to alter the normal layout of the html tags on our page. 
+
+

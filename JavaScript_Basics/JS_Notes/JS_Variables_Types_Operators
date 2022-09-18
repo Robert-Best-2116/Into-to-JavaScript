@@ -1,0 +1,94 @@
+
+
+Variables
+    In javascript we can define variables-a name that we can use to store and modify some information. 
+
+        ex
+            var count = 5;
+            var message = "Hello World";
+            var LikesJS = true'
+    
+    when declaring a variable we need to start by uuing the var keyword followed by giving it a uquie name. the more descriptive the better. We can set variabiles equal to diffrent types of data. in the examples we have a number, a string, and a boolean (true or false statment). We dont have to give a value to a variable, it can be left undefined or we can define it later and rserv ethe name and space ahead of time, the values are allowed to be reaseisnged and changed later
+
+    while there are diffrent types of data in JavaSCript variabiles are loosey typed meaning that we can change there type at will, ex a number to a string, while this isnt tyrpcially something we want to do in our code we should be aware that we can change it.
+
+
+
+Operators
+
+    There are many diffrent operators in JS and we are already firilar with some of them from our knowledge of math. the = sign for example sets our variables equal to some values and also to change what the variable is equal too. unlike math the = operator does not make sure that both sides of the statment are balanced, bur rather to set the left side of the statment equal to whatever is on the right side of the statment. the following example breaks down exzactley how this does this
+
+        ex
+            var count = 5;
+                1. create a variable if it dosent already exzist called count
+                2. set the value of the count variable to 5
+
+            var count = "I'm now a string!";
+                1 set the value of an already existing variable called count to the string "I'm now a string!"
+
+    
+    Much of programming sytnax is about expressinga spesific operation is a consistent and convenient way. we dont want our JS engine to have to guess wha twe want it to do or make assumptions about what we want. 
+
+
+    The next operator we will talk about is the + when we are working with number type variables + will work as we would expect adding the two vlaues together, when working with Javascript it dosent differentiate between whole intergers and numbers with decimals. 
+
+
+    when working with string values. 
+
+        When working with strings + is used to concatenate them together, concatenation is like gluing the strings together to make a new one. see the example below.
+
+        ex
+
+            var name = "Marisa";
+            var message = "JS is actually the trickiest language";
+            console.log(name + " says " + message);
+            // "Marisa says JS is actually the trickiest language"
+
+    
+    What happens if we mix data/information types????
+        
+        typically if we add numbers and strings together they will become a new string. 
+
+        var name = "Phil";
+        var luckyNumber = 8;
+        console.log(name + "'s lucky number is " + luckyNumber);
+        // "Phil's lucky number is 8"
+
+        or 
+
+        console.log("the number is " + 12 + 3);         // "the number is 123"
+        console.log(12 + 3 + " is a different number"); // "15 is a different number"
+
+        In regards to the second example, the order really matters, javascript reads left to right wich is why the first example combines 12 and 3 into 123 and the second example makes 12 and 3 into 15. 
+
+
+    Basic Operators
+         
+        + adds two numbers together or concatentates strings
+        - subtacts numbers together
+        * multiplies numbers
+        / dividies numbers
+
+        The order of operations in pure number variables will still operate as normal and we can add ( ) to change how the math occurs just like normal math.
+
+    
+    Combined Operators, 
+
+        we can also combine operators such as -=, *=, /= and += 
+
+        ex 
+            we can combine do math quickly
+            var total = 10;
+            total += 5; // equivalent to total = total + 5;
+
+            or
+
+            we can use += to concatenate quickly
+            var message = "hello";
+            message += " world"; // message is now "hello world"
+
+
+
+Types Of Data!!!
+
+    Some types of data are considered primitive as they essentially just store information where there are other types that can provide s tructuer as ewll. for now all we need to focus on are number string and boolean (true/false) we will soon loon about structural types as well with object and array. 

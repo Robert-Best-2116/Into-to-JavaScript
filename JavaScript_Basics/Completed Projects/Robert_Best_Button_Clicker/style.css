@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*nav information */
+
+.nav {
+    background-color: grey;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    margin-bottom: 25px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+input {
+
+    border: 1px solid black;
+}
+.login {
+    background-color: #2B78E4;
+    box-shadow: 3px 3px black;
+}
+
+/* main container and child elments */
+.container {
+    display: flex;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+.column1{
+    flex: 1;
+}
+.column2 {
+    flex: 1;
+    margin-left: 50px;
+    width: auto;
+}
+/* ninja definitions */
+.ninja1 {   
+    width: 500px;
+    height: 150px;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.ninja1 p {
+    padding-bottom: 10px;
+}
+
+.ninja2 {
+    
+    width: 500px;
+    height: 150px;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.ninja2 p {
+    padding-bottom: 10px;
+}
+
+.noun {
+    padding-left: 15px;
+    font-style: italic;
+}
+
+.ninjas {
+    font-style: italic;
+}
+/* like button formatting */
+
+.likes {
+    background-color: #FFD966;
+}
+
+/* dojonary formatting*/ 
+
+
+.dojonary {
+    padding: 25px;
+    width: auto;
+    height: 75px;
+    border: 3px solid black;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.add{
+    background-color: #93C47D;
+    box-shadow: 3px 3px black;
+    width: 170px;
+}

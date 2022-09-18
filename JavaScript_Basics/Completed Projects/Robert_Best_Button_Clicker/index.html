@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Button Clicker</title>
+</head>
+<body>
+    <nav class="nav"> 
+            <h1>Dojonary</h1> 
+            <input class="search" type="text" placeholder="Search"/>
+            <button class="login" onclick= "logOut(this)">Login</button>
+    </nav>
+        <div class="container">
+            <div class="column1">
+                <div class="ninja1">              
+                    <div>                    
+                        <h1>ninja</h1>        
+                            <p class="noun">noun</p>   
+                            <p>Pluarl: <span class="ninjas">ninjas</span></p>    
+                            <button class="likes" onclick="alert('Ninja was liked')">13 likes</button>       
+                    </div>    
+                    <div>    
+                            <p>A practitioner skilled in the <a href="">Japanese</a> art of <a href="">ninjutsu</a></p>    
+                    </div>   
+                    </div>    
+                    <div class="ninja2"> 
+                        <div>
+                            <h1>ninja</h1>                
+                            <p class="noun">noun</p>                
+                            <p>Pluarl: <span class="ninjas">ninjas</span></p>                
+                            <button class="likes" onclick="alert('Ninja was liked')">37 likes</button>
+                        </div>
+                        <div>
+                            <p>A <a href="">programmer</a> who breaks down problems with <a href="">zen</a>-like focus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column2">
+                    <div class="dojonary">           
+                        <div>
+                            <h2>Dojonary is</h2>
+                        </div>
+                        <div>
+                            <h2>defined by <span id="you">YOU</span</h2>
+                        </div>
+                        <div>
+                            <button class="add" onclick="hide(this)">Add Definiton</button>                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

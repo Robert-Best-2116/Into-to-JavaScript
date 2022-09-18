@@ -1,0 +1,539 @@
+
+
+
+Lecture 9/6 Into to JavaScript
+
+    -notes from new TA- learn to be resourcefull, find the right ways to reword the question if your having problems finding the answer
+    you need. 
+
+    will need to install node js to run java script. https://nodejs.org/en/download/
+    see link in discord. to add the note to the variables. https://www.youtube.com/watch?v=oFF_QryVSJk
+
+    alternative to running js node on your computer, also it will help you visualise the variables inside of your code. 
+    https://pythontutor.com/
+    It will show you how the code runs step by step, 
+    
+    to make comments in the notes which are readable only to the coder use control + /
+
+    
+
+
+    -Data Types, 
+
+        Strings-strings are located inside of quotes, ex
+            
+            var myString = "Caden"
+
+            var unicorn = "24"
+
+        if we want to be able to use the data type inside of the string we need to have the the variable and the quotes. 
+
+        Numbers-numbers do not require quotes, and end with a semicolin when declared. you can use decimals
+
+            var myNum = 60.54;
+
+            var age = 24;
+
+        Boolean-booleans are true or false statements-they do not have quotes
+
+            var ishuman = false
+
+
+        JavaScript has a math focus, you can do math with thease following symbols. +,-,*,/, you would use the var1+var2 inside of a console log
+
+        Other data types include undefined and null undefined simply has no value, null means it has no value at all
+
+        var nothing;
+
+        var nothing = null;
+
+
+        Functions
+        
+            functions are programs that follow your directions 
+
+            functions must start with the word function, followed by the name of the function, the paramaters and followed by the code
+
+            ex  function addNumbers (a,b){
+                return (a+b)
+
+            }
+
+            to call a function write the name of the function followed by the () 
+
+                ex addNumbers (a,b)
+
+                ex functoin sayHi(){
+                    return "Hello Robert"
+                }
+                 
+                console.log(sayHi());
+
+                or 
+
+                var greeting = sayHi(); 
+                    console.log(greeting)
+
+                        Console.log is best used for debugging while storing the answer inside a variable is better for actuall running programs. 
+
+        Example for swapping names out in greeting
+
+            functoin sayHi(name){
+                return "Hello" + name
+            }
+
+            var gretting = sayHi("Trae");
+
+            console.log(greeting)
+
+
+        Math 
+
+            function addNums(num1, num2){
+                return num1+num2;
+            }
+            var total = addNums(num1,num2)
+
+            or
+            
+            var total = addNums(4,6)
+            console.log(total)
+
+
+Lecture/Office Hours for 9/7
+
+
+    Link for Array Comprehensions
+
+        https://lia.disi.unibo.it/materiale/JS/developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions.html#:~:text=The%20array%20comprehension%20syntax%20is,defines%20array%20comprehensions%20for%20JavaScript
+
+
+    when doing in console.log you can use the diffrent quotes ex " " or '', it is best practice to keep them consistant. however if you are usuing quotes inside of quotes in console.log you will need to seperate them. 
+
+    escape characters in java script
+
+        https://www.tutorialspoint.com/escape-characters-in-javascript
+
+    Lets talk about = signs, 
+
+        = is an assignment, meaning this is what the value is
+        == is a comparason, will check the value but not the data type for comparason
+        === is strick equality-it will also check the data type along with the value. so strings and numbers will be considered diffrent, 
+
+
+
+    Concatenate
+        combining two strings or lists together into a longer string or list, 
+        you would use the ` signs 
+            ex console.log(`im concatenating ${ex1} ${ex2});
+
+    For Loops! are awesome
+        for (var num = 0; num <= 10; num++)
+        console.log(num)
+
+
+    Lecture Begins, 
+
+
+    Went over yellow belt exam, good information, need to be up to the likes assignment in regards to reading, and assignemnts compleated to unlock the exam
+
+    javascript adds functionality, it commuincates with the website via events, ex alerts and buttons, the event is the click of the button, some functions such as alert can be written directley into the html you link javascript to the html via the script command, the script command always goes at the bottom of the body. its a good idea to test the java script code with a console.log in the script.js file and inspect the code on the browser. 
+
+    you will link the button or other object to the javascript, via the name,
+
+    ex 
+        HTML <button onclick="clicked()'>Click Me?!</button> javascript-functoin clicked(){
+
+        }
+
+    you can change the button or other object by passing in things via javascript to minipulate it, by changing inner text, removing the object interacted with, fading it, or other items thease are called Events. 
+
+        link on more information, https://www.simplilearn.com/tutorials/javascript-tutorial/javascript-this-keyword
+
+            ex HTML <button onclick="clicked(this)'>Click Me?!</button> javascript-functoin clicked(element){
+                console.log (element)-would console log that the button was clicked
+                element.innerText = "clicked"
+            
+                }
+
+        minipulate more buttons by changing the number inside of the button
+
+        Resources for changing data types in javascript
+        https://www.digitalocean.com/community/tutorials/how-to-convert-data-types-in-javascript
+
+        you can examine the type of information present to see what would need to be changed/related to by the javascript
+        console.log(typeof) ex console.log(typeof element.innerText);
+
+        ex HTML 
+        <p> Click button to incrase age </P>
+        button onclick="increaseAge(this)">24</button>
+
+        /JavaScript
+        console.log(typeof element.innerText);
+        var age= parseInt(element.innerText)
+        function.innerText = age += 1;
+
+        }
+
+        Pulling in multiple objects, with functions to be minipulated with events. 
+
+        HTML
+        <h1 id="header">JavaScript inthe browser</h1>
+        <button onclick="changeHeader()>Change the Header</button>
+
+
+        JS
+        var header = document.querySelector("h1");
+        function changeHeader(){
+            console.log(header) this is done to check that its working
+            header.innerText = "The header changed";
+
+            or
+
+            header.remove();
+        }
+
+        when debugging, console.log the item to see if its working or not. or what isnt working, and check to see if you saved, and remove the inspect tool. 
+
+
+    Extra Event Resources
+        https://developer.mozilla.org/en-US/docs/Web/Events
+
+
+
+
+Lecture 9/8
+
+    functions need to be called outside of its self, the only exception is recursion, which we wont be covering until much more advanced classes.  
+
+    Todays lecture is based on the yellow belt exam, we are doing a mock up, Caden reccomends first creating your block out, to get a path to follow, teach also reccomends doing the css right after you do the html for it. its also wise to imediatley link your code to your css and js. its also a good idea to seperate your CSS and HTML so that you can see them all at the same time. makes it super easy to code and see your class's and id's 
+
+    you can remove the bullet points in an ordered list by adding list-style: none;
+
+    you can use the main tag instead of a div tag for the main content area. 
+
+    emmet short cut, ul>li*4>a to create four unordered list. all with anchor tags. super dope. 
+
+    to change the background image of the cart. to white instead of just the shopping cart image
+        you could use a div or span tag and use something like border-radius to round it. Then you can use JS to dynamically change the number if a user "adds something to cart"
+
+
+    when working in CSS its wise to add comments to the CSS at the begining or end of the next part. /* for comment
+
+    when working with CSS and percents, the child will be responceive to the parent elelment, so if the parent is 75% of the whole the child will be 100% of the parent to fill the whole parent element.
+
+    to auto center the element, you can do margin: 0 auto;
+
+    when modifiying containers with images, you can size the images to be the same size then modify the the parent containers height and with afterwards, you can also change flex direction, to column instead of row. when you do that it changes the axis that the flex works on you may need to use the align items property. 
+
+    if you want to add a bottom border to any content, youl need to just add a border bottom, you may need to add some padding to the bottom of the modified content to keep it from touching things inside of it, and it would be a good idea to add some margin to the bottom so that its also not touching things. 
+
+    if there are any diffrences between buttons or things like that just replicate one of them. 
+
+    JavaScript!
+
+    to position a a zero into the shopping cart you could use position absoulte. 
+
+    setting up a function to add an alert to show up ten seconds after page loads
+
+        setTimeout() 
+            ex
+            setTimeout(function(){
+            alert("message")
+            }, time in milliseconds)
+
+    getting data from a form, search js how to get data from a form. forms auto refresh the page, so we change the default feature by usuing the event.preventDefault();
+
+        FormData()-Note console.log is to test that its working. remove during final stage. 
+
+        var form = document.querySelector("form");
+
+        function searchAlert(event){
+            event.preventDefault();
+            var searchForm = new formData(form);
+            alert(searchForm.get("search-bar"));
+
+            console.log(searchForm.get("search-bar"));
+
+        }
+
+        form.addEventListener("submit", searchAlert)
+
+
+    function increase cart - note you will want to tag all the buttons with an onclick="incraseCart()" function 
+
+        var cart = document.querySelector('span')
+
+        function incraseCart(){
+            var cartAmount = parseInt(cart.innerText);
+            cart.innerText = cartAmount + 1
+        }
+
+
+
+Lecture Notes 9/13
+
+        This always refers to the tag/element that its imbeded in. if its a select tag or a button its refering exzactly to the one tag. 
+
+
+    Command Functions!!! 
+
+        -Note, if you open up the file exlorer and click the white space where everything is written itll give you the path to where your at. 
+
+            -cheat sheet for windows: https://serverspace.us/support/help/windows-cmd-commands-cheat-sheet/
+
+
+        Present Working Directory, 
+            pwd: shows you what directory your currently in
+
+        List Files
+            ls: shows you a list of the files that are in the directory your in. 
+
+        Go Back one folder
+            cd..: will move you back one folder
+
+        go to the main directory
+            cd: (name of the folder you want, will go to the folder)
+
+        -Note if you hit the tab button while writing out a folder name it will auto compleate
+
+        List Files Long Version
+            ls -1: will list the files longways instead of next to one another
+
+        Clear the terminal
+            clear/clr: will clear up the terminal, but keep you in the current reposatory. 
+
+        Show Hidden Files
+            ls -a: shows your hidden files/folders
+
+        Making new folders
+            mkdir (name of folder): makes new folders!
+
+        More info in the lessions. 
+
+        you can use this to add files to a vs code. and create multiple folders at once
+
+
+
+    Running a javascript file through the terminal
+
+        go to the terminal window in VS code, and tell it to run node script.js
+
+    
+
+    Arrays
+        
+        When accessing an array, if you use [] then it will choose that value, when overwriting a value, you can use the .pop function, simply put the name of the array, and then pop() 
+
+        accessing an array
+            arryName ()
+
+        pop function
+
+            arryName.pop ("value")
+            or 
+            arryName.pop [] ("value")
+
+        push function
+
+            arryName.push ("value")
+            or
+            arryName.push [] ("value")
+
+
+Array Length
+    Array lengths always start at one dispite the fact that the index starts at zero
+
+    we can view the length of a list via console.log
+
+        console.log(arryName.length);
+
+    Lenth is important for looping in arrays 
+
+        when doing a for loop, if you want to run it to the length of the array, use the following
+
+            for (var id= 0; idx < numbers.length; idx++)
+
+                -note idx stands for index
+
+
+
+
+Lecture 9/14
+
+    how to change the same word for editing, control + d to change the same word accrost the text usefull for editing array names
+
+    debugging a function, add console.log right after the function with the text, has been called to see if the the function is working properly. 
+    you can also add it at  the begining of the script when linking it to the html to be sure that its working. 
+
+        Office hours Algos
+
+            wright a function sayHello that takes in 2 parameters both strings, name and day. have the function console.log Hello (name) happy (day)! ex, sayHello ('Caden', 'Sunday') should console log Hello Caden Happy Sunday. 
+
+                step one create function
+
+                    function sayHello(name,day) {
+
+                    }
+                
+                step 2, add the console.log
+
+                    function sayHello(name,day) {
+                        console.log(`Hello ${name} Happy ${day}!`);
+                    }
+
+                step 3, add varaibles, 
+                    var fname = "renee"
+                    var wday = "saturday"
+
+                step 4, call the function,
+
+                    function sayHello(name,day) {
+                        console.log(`Hello ${name} Happy ${day}!`);
+                    }
+
+                    sayHello(fname, wday);
+
+
+            write a function logAllNums to console log all numbers between 1-255
+
+                function logAllNums(){
+                    for (var num = 1; num <= 255; num++){
+                        console.log (num):
+
+                    }
+                }
+
+                logAllNums();
+
+            
+            take the function from above, and instead of console logging every number add the number to an array then return the array at the end of the for loop. 
+
+                function logAllNumsArray(){
+                    var arr = []
+                    for (var num = 1; num <= 255; num++){
+                        arry.push(num)
+
+                    }
+                    return arr
+                }
+
+                var numArray = logAllNumsArray();
+                console.log(numArray);
+
+                alternative way to add it in
+                    if(num <= 255) { arr.push(num) }
+
+                    add the if statement directly after the for loop so that everytime it loops it will go through the if statement first then arr.push(num)
+
+
+
+    Lecture Notes 
+
+        The usefull thing to do with github is to store your progress as your working and it keeps your projects updated and stored, it also keeps a refrence of all the times that you uploaded and commited over time, which you can show potential employers. 
+
+        Github will let you know that you and someone else have been working on the same file, and itll show where and which ones have been edited, and then you can merge both branches to make the finished/final branch the most up to date
+
+        You can swith between branches in github and see what has last been pushed to github, but not what your activley working on that hasent beeen pushed. 
+
+        making a reposatory for git on your computer on the terminal 
+            note- type in git to get a list of commands, also type in git status to let you know where your att, how many commits there are, and what the changes are to be commited. always run it after git add. 
+
+            open your terminal. go to the file that you want to create a reposatory too. type in git init it will create a new reposatory. (it will create a master branch.) the master branch will only show up on the git bash, to add files to github, type in git add . to add alllll folders then type add . then run git commit -m "first commit"  (note it will only show 50 chacters on the screen but theres more), then switch to the main branch, with git branch -M main, will only need to do this once, then add the git remote add origin which the link will be there. then use git push -u origin main, to link everthing there and itll show that its added. 
+
+
+            push it up to github to an exzisting branch!!!!
+
+                go to the folder that your planning to commit. run git status, itll show you whats up to date and what hasent been added yet
+                then run git add . run git status to be sure it all got added up, then git commit -m "what you did" then run git push -u origin main and itll be added! 
+
+        making a reposatory on github, 
+            follow the instructions on github. 
+
+
+
+lecture 9/15
+
+    best practices for choosing user names, keep it profesional 
+        https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git
+
+    write a function sumAllNums to sum all numbers from 1 to 100 the function should return the sum at the very end
+        1 write a function sumAllNums
+        2 make a variable for the sum start at 0
+        3 make a for loop 1-100
+        4 increment the sum by num
+        5 return sum at end of for loop
+        6 call the function
+
+        function sumAllNums() {
+            var sum = 0;
+            for (var num = 1; num <=100; num++){
+                sum += num;
+            }
+            return sum
+        }
+
+    write a sum function sumEven nums to sum all even numbers between 1 to 100 function should return the sum at the end
+        1 write a function
+        2 declare sum variable
+        3 for loop 1-100
+        4 create if statment to check for even numbers n % 2 == 0 or we could increment the for loop by 2
+        5 incremet sum by num if its even
+        6 return the sum at the end of for loop
+        7 call the function 
+        
+            function sumEvens() {
+                var sum = 0;
+                for (var num = 1; num <= 100; num++){
+                    if(num %  2 == 0){
+                        sum += num
+                    }
+                }
+                return sum;
+            }
+
+            var total = sumEvenNums()
+
+            function sumEvens() {
+                var sum = 0;
+                for (var num = 1; num <= 100; num+2){
+                        sum += num
+                    }
+                }
+                return sum;
+            }
+
+            var total = sumEvenNums()
+
+
+
+    Actual lecture
+
+        arrays are denoted with [], objects are denoted with {} objects are common because all sorts of diffrent data types can be stored and structed in a useful way. an object is made up of key value pairs, like firstName: john, lastName : Doe, age : 50
+
+        ex
+            var employee = {
+                name: "Caden:,
+                role: "instructor:
+                age: 24,
+                favHobbies: ["Playing Games", "Coding", "Not Hiking"]
+
+            }
+
+            console.log(employee.name);
+            or
+            console.log(employee['name']);
+
+            to access a spesific index inside of an array
+            console.log(employee.favHobbies[0]);
+
+
+        What is an API??
+            itsa way to connect to a diffrent website and pull its data. 
+
+            you can connect an api 
+            need to rewatch the lecture 
+
+
+
+

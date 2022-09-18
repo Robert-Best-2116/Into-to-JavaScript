@@ -1,0 +1,161 @@
+
+
+
+Query Selector
+
+    Just as you can use CSS selectors for HTML you can use selectors for javascript. the way we do that is t ouse a function called document.queryselector if we want to select an element with an id of title we can write the code that looks like the following. 
+
+        HTML ex
+            <h1 id="title">Hello World</h1>
+
+        JavaScript-note both of thease will select the h1 tag
+            var h1 = document.querySelector("h1");
+            var title = document.querySelector("#title");
+
+        
+    We can also combine selectors like weve seen before. if for instance we had an image inside of an element with the class "nav" we could write code that looks like the following
+
+        HMTL ex
+            <div class="nav">
+                <img src="logo.png" alt="logo">
+                <h1>hello World</h1>
+            </div>
+
+        JavaScript
+            var logoImg = document.querySelector(".nav img");
+
+        
+        note if there is mrore than one element that could match the querySelector, it will only return the first element it finds, if thereis no matching element we will get back a null instead.
+
+
+
+Changing an HTML element
+    Usuing JS we can modify the HTML elements that we select. If the tag displays text, like an h3 or a p tag then that text is something that we can modify. the way we can do that is by usuing innerText
+
+    HTML ex
+        <h3>Lorem Ipsem</h3>
+
+    JavaScript ex
+        var h3 = document.querySelector("h3");
+        h3.innerText = "New Title";
+
+    
+    we can also alter HTML elements by changing their attributes. for instance if our HTML element was an img tag we would be able t ochange its src or alt attributes. if we were to change the src from one particular file to a diffrent file it will change the image that is displayed on the page. 
+
+    HTML ex
+        <img src="cat.jpg" alt="pet" id="pet-img"/>
+        <button onclick="switchImg()">Switch</button>
+
+    JavaScript ex
+        var petImg = document.querySelector("#pet-img");
+
+        function switchImg() {
+            petImg.src = "dog.jpg";
+        }
+
+    
+
+Changing an Elements Style
+
+    The HTML tags we can alter also have css that is applied to them. This is something that we can change usuing JavaScript as well. If we want to change how a button looks in responce to it being pressed we could do something like this.  
+
+        HTML ex
+            <button onclick="setActive(this)">Switch to dark mode</button>
+
+        JavaScript
+            function setActive(element) {
+                element.style.backgroundColor = "#2222222";
+                element.style.color = "#ffffff";
+            }
+
+    
+    the elements .style is a JavaScript object that contains all of the CSS styles we can apply for the element. in this case we change its color and also its background color, note that we were usuing a CSS property that is normally hyphenated, in our JavaScript we will need to rewrite it with alternating capitalization, for example margin-left becomes marginLeft. sometimes we want to apply a number of CSS properties at once and while we can do that with .style it may be more efficent for us to use a CSS class. We could rewrite the above example to use a class like so. 
+
+        HTML ex
+            <button onclick="setActive(this)">Switch to dark mode</button>
+
+        Javascript ex
+            function setActive(element) {
+                    element.classList.add("dark-mode");
+            }
+
+
+    This way whatever styles are present in the CSS class dark-mode are applied to the button. Note that an element is allowed to have multiple clases so we can treat the classList as if it is like an Array. The classList can be used with .add to push a new class to the list and
+    .remove to remove a spesific class We can combine all of what weve learned to makea button that we can toggle from one mode to another
+
+        HTML ex
+            <button onclick="setActive(this")>Switch to dark mode</button>
+
+        JavaScript ex
+            Functoin setActive(element) {
+                if(element.classList.includes("dark-mode")) {
+                    element.innerText = "Switch to light mode";
+                    element.classList.remove("dark-mode");
+                    }
+                else {
+                    element.innerText = "Switch to dark mode"; 
+                    element.classList.add("dark-mode");
+                }
+            }
+
+
+
+Timeout
+
+    sometimes we want to apply a delay in our code which can be done in JavaScript by usuing a function called setTimeout. The setTimeout function takes two parameters: (1) a function to be called and (2) the delay in milliseconds. The function we provide is often refered to as a callback function (more information on call back functions https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) and we do not need to invoke it ourselves, we just need to put its name in a parameter. The setTimeout will call the callback function after the amount of time provided. 
+
+        JavaScript ex
+            function message() {
+                console.log("Delayed message");
+            }
+
+        console.log("Start");
+        setTimeout(message, 3000);
+        console.log("End");
+
+        the start and end messages will display imediatley, and the mesage() function will run after 3 seconds. 
+
+
+On Change
+
+    Weve previously seen events that relate to a user clicking on a given element or positiong their mouse over it. there is another 
+    type of eveents that we shoud also familiarize orusevles with relating to users interacting with our forms. in our forms the elements that the user can interact with are commonly the input, textarea, and select tags, and while we can still use click and hover events with them if we want to know when a user has typed some text into a field or slecected an option we have events that can relate to those things happening, 
+
+    consider the following example with a select tag containg in multiple options. if we want to react to the option being changed we can
+    write code that looks like the following.
+
+        HTML ex
+        
+            <label>I would like to eat </label>
+            <select onchange="chooseLunch(this)">
+                <option>Tacos</option>
+                <option>Pasta</option>
+                <option>Sushi</option>
+        </select>
+
+        JavaScript ex
+
+            function chooseLunch(element) {
+                alert("You picked " + element.value);
+            }
+
+
+    We can also react to a user typing into a text element. the following example will show what happens when text inputs are changed, the card text will also change to match
+
+        HTML ex
+            
+            <div> class="card">
+                <p>Hello my name is:</p>
+                <h3 id="name-tag">Example</h3>
+            </div>
+        
+            <input type=""text" value="Example" oninput="setName(this)">
+
+        JavaScript ex
+            
+            var nameTag = 
+            docutment.querySelector("#name-tag");
+            function setName(element) {
+                console.log(element.value);
+                nameSpan.innerText = element.value;
+            }

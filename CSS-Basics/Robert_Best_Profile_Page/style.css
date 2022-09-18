@@ -1,0 +1,222 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* nav info grave robed from prior project */
+
+
+.nav {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 50px
+    
+
+}
+
+.nav-title {
+    width: 500px;
+    color: white;
+    padding-left: 25px;
+
+}
+ .nav-links {
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #C4C4C4;
+}
+
+.nav-links a {
+    width: 100px;
+}
+
+ul {
+    list-style: none; 
+    
+}
+.nav a {
+    text-decoration: none;
+    color: #C4C4C4;
+}
+.active {
+    color: #FEFEFE;
+
+}
+.btn {
+   
+    color: #FEFEFE;
+    background-color: #17A2B8;
+    width: 75px;
+    height: 25px;
+    
+
+}
+/* main content containers */
+
+.container {
+    display: flex;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.column1 {
+    flex: 2;
+
+}
+
+.column2 {
+    flex: 1;
+    margin-left: 25px;
+
+}
+
+/* user card grave robbed */
+
+.user-card { 
+    margin: auto;
+    height: 450px;
+    padding: 20px;
+    padding-left: 50px;
+    border: 3px solid grey;
+    background: linear-gradient(to bottom, 
+    #16A2B8 25%,
+    #16A2B8 25%,
+    #FFFFFF 0%,
+    #FFFFFF 0%);
+
+}
+
+.user_circle{
+    padding: 1px;
+    width: 200px;
+    border: 3px solid grey ;
+    border-radius: 50%;
+}
+
+.map_marker {
+    width: 25px;
+}
+
+.gear {
+    width: 25px;
+}
+
+div {
+    margin: 15px;
+}
+
+/* Education Styling */
+
+.edu {
+    margin: auto;
+    margin-top: 50px;
+    height: 200px;
+    padding-left: 50px;
+    border: 3px solid grey;
+    background: linear-gradient(to bottom, 
+    black 25%,
+    black 25%,
+    #FFFFFF 0%,
+    #FFFFFF 0%);
+
+}
+
+.edu-top h3{
+    color: white;
+}
+
+.dates {
+    color: grey;
+}
+
+
+/* Column 2 */
+
+
+
+/* connection requests */
+
+.connection-r {
+    margin: auto;
+    height: 200px;
+
+    border: 3px solid grey;
+    background: linear-gradient(to bottom, 
+    black 25%,
+    black 25%,
+    #FFFFFF 0%,
+    #FFFFFF 0%);
+
+
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: grey;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+.connection-body img {
+    width: 25px;
+    margin-left: 5px;
+
+}
+
+
+/* your connections */
+
+.merger {
+    display: flex;
+    flex-direction: column;
+}
+
+.your-connections {
+    margin: auto;
+    margin-top: 50px;
+    height: 250px;
+    
+    padding-top: 20px;
+    border: 3px solid grey;
+    background: linear-gradient(to bottom, 
+    black 25%,
+    black 25%,
+    #FFFFFF 0%,
+    #FFFFFF 0%);
+
+
+
+}
+
+.oval {
+    width: 200px;
+    height: 50px;
+    background-color: grey;
+    border-radius: 40%;    
+    text-align: center;
+}
+
+.your-connections-body img {
+    width: 25px;
+    margin-left: 5px;
+}
+
+.view-more {
+    margin: 0;
+    padding-top: 25px;
+    border-top: 3px solid grey;
+}
+
+
+/* messed with the top formatting of the nav bar and i just kept messing it up, notes for later that it needs inprovement, i saw that theres a video walk through on the solutions page that i would like to watch and code along with after ever thing else is done as id like to know how to properly format the page so that the nav links and profile section are in order as well as getting the containers to line up with them and to get the view more border to fit fully accrost the section but thats for another time once i get the other two projects finished.
+
+please let me know your thoughts if you have the time thanks again for all of your help.*/

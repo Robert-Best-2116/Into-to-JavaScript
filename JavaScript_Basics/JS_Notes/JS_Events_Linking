@@ -1,0 +1,84 @@
+
+
+
+Linking HTML 
+
+    Inorder to link your HTML to your Javascript you will use the following tag. 
+    
+        <script src="script.js"></script>
+
+
+On Click
+    On click events are triggered by code written in Javascript, the purpose of javascript is that it alows the user to hae functionality in the website, the simplest form of interaction is on click events
+
+        ex
+            <button onclick="alert('hello')">Click Me</button> 
+
+    if we add an aditoinal attribute called onclick on the element in our html we can set the onclick equal to a JavaScript function that will then be executed when called. In our example avoe it will trigger an alert which will display a dialog window showing whatever message we provide to it. 
+
+
+The Power of This!!!!
+
+    as weve seen previously we can use alert() to react to user clicking on elements in our page. If we want todo more to minipulate the element that is clicked on we can make use of this a special paramater to pass into the custom JavaScript functions we can write. 
+
+        HTML ex
+            <button onclick="example(this)">Click Me</button>
+        
+        JS ex
+            function example(element) {
+                console.log("element clicked", element);
+            }
+            
+        
+    -Note the part that links them together is the example, before the this and the example after function. 
+
+    
+    The power of this is that we can use Javascript to read the content of the element or to manipulate it if we like. there are a number of things we can do to manipulate the element like changing its style or changing its content. text is one of the most common things we can manipulate and we can do this by usuing the .innerText property. 
+
+            HTML ex
+                <button onclick="turnOff(this)">On</button>
+
+            JavaScript ex
+                function turnOff(element) {
+                    element.innerText = "Off";
+                }
+
+    
+    We can use another function to remove the element from the page entirely by usuing the function .remove()
+
+            HTML ex
+                <img src="ninja.png" alt="ninja"
+                    onclick="hide(this)">
+
+            JavaScript ex
+
+                function hide(element) {
+                    element.remove();
+                }
+
+    
+    Mouse Over 
+        There are move events besides those tied to clicking on elements on our website, another is the user hovering over an element with their mouse. hover is usually used with two seperate events, the part where the users mouse is first over the element - onmouseover, and the part where it leaves the element onmouseout
+
+            HTML ex
+                <div class="block" onmouseover="over(this)" onmouseout="out(this)"></div>
+
+            CSS ex
+                .block {
+                    height: 50px;
+                    width: 200px;
+                    background-color: silver;
+                    border: 1px dotted black;
+                }
+                
+            JavaScript ex
+                function over(element) {
+                    alert("mouseover");
+                }
+
+                function out(element) {
+                    alert("mouseout");
+                }
+
+        
+        this code will alert messaes when the user hovers their mouse over the block, this example also includes the parameter when we called the function called this? weird wording, in the javascript functions thease parameters are named element. in this case the parameter element is a javascript object we can minipulate. 

@@ -1,0 +1,24 @@
+
+
+
+GitHub Pages!!!
+    https://pages.github.com/
+
+    This creates a webserver for us to host our project!! woo then we can share it with the world 
+
+    you will need to use the HTML tag index.html as well as style.css for formatting, we want our folder to have our html right after the folder. not imbeded deep into the file. 
+    
+    to set it us as server go to the settings and scroll down to the github pages and itll give you a website name for the hosting. 
+    its wise to set the link into the about section, mind you the page will take a few minutes up to half an hour for the site to load. 
+
+    be sure to use the master path, and one branch. 
+
+
+Overflow!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+    Overflow is used to solve the issue of to much content and not enough container, 
+    overflow: auto; adds a scroll bar!
+    overflow: hidden; will hide any excess content
+    overflow: scroll; always have a scroll bar on the side and the bottom
+    
+    Overflow Auto is typically the best solution. 

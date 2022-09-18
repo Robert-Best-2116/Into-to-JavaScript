@@ -1,0 +1,46 @@
+
+
+.container {
+
+    width: 700px;
+    background-color: lightgray;
+
+}
+
+h1 {
+
+    text-align: center;
+    color: grey;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 50px;
+}
+
+img {
+    height: 200px;
+}
+
+.box1 {
+
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.box2 {
+
+    background-color: darkgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.box3 {
+
+    background-color: goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

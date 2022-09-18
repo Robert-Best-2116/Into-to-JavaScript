@@ -1,0 +1,23 @@
+
+
+
+The Terminal, what is it??? 
+    it is your primary tool to navigate throught your systems folders and files, set up cloud servers, run tests and to manage and update the data bases for your applications, to use the terminal on a windows hit the windows key and the R button. the terminal will pop up
+
+    terminals are user interfaces that connects us to our operating system, its alot like the graphical interface we use, the normal one lol, the terminal does the same thing a regular interface does but from a command bar/text window. 
+
+    when you open the terminal, the information presented will tell you the file path that you are on, users/shado/cmder, so in the user file, my computer (shadowPheonix) and in the cmder file.
+
+    ~/ means /home/your user directory
+
+    you can provide relatitve paths by adding the ~/ and then adding the folder inside of that users etc. 
+    or you can write the whole thing out. 
+
+    commands!!!
+        cat: outputs the text of the file(must be a text file) into the terminal. 
+            ex
+                cat name of file
+
+        cd: change directory, alows you to search inside/look inside a diffrent file folder. 
+
+    terminals are just user interfaces presented in a text command. 

@@ -1,0 +1,101 @@
+8/30/2022 Into into HTML
+
+Google HTML Meta Tags
+
+https://betterprogramming.pub/how-to-use-vscode-like-a-pro-e120c428f45f
+
+You can indent groups of code by highlighting them then hitting ctrl + ]
+
+you can move a group of text by highlighting the text and move it by hitting alt + up and down keys-SUPER HELPFUL
+
+to auto type tags simply type in the tags ex li or h2 and hit enter. (they are called emmet abreviations)
+
+indentation show the children of the parent list, its their for readabability and simplifacation.  indenting also refers to as nesting. 
+
+right click for format document will help to fix any improper indentation. 
+
+forms are how information is submiited from the client to the server
+
+What are divs? why do we use them??? divs are containers, they seperate/group like elemtents together, it helps to keep related functions together that help to solve a common problem
+
+The <div> tag defines a division or a section in an HTML document. The <div> tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript. The <div> tag is easily styled by using the class or id attribute. Any sort of content can be put inside the <div> tag!
+
+
+
+never do any styling on any html, ever, super bad practices. will lose points on the exam. 
+
+
+always valadate your code ! search for code valadator, and use the w3 valdator it will help to find out the errors and tell you how to fix them
+
+
+Ctrl + D will highlight all simimilar tags, 
+
+
+
+
+
+8/31/2022 Into To CSS
+
+Running a live server Alt+L+O to see your changes in real time
+
+What does CSS stand for? Cascading Style Sheets
+
+Instead of doing inline styling we do CSS styling so that its not messy and much easer to read we want to be as organized as possible during coding, 
+
+when adding CSS or html pages? click on the folder and then click new file, to keep them seperate from the other 
+when linking the CSS to your html page you type in link, use the emmit tag, and use the correct CSS name it will autofill style, ex 
+Note-only have one H1 tag, it helps with searching and proper formatting
+
+Spesfific selection in CSS- you will add a class or id to the HTML tag, ex sub-header, be sure to keep your classes or id short but relative to the subject, 
+instead of usuing h2 or other element you will use .sub-header, it will cause the code to target the spesific element. 
+
+you can use the same class for multiple elements, but id's are used for one element, they are spesific to the one element, it can not be reused. 
+for selecting id's youl use a # and the id, ex #bad-games it can be used multiple times, but it will cause issues with the backend elements-it will only search for one id, and select the first id that it comes accrost, it will also have issues with the valadator.
+
+Usuing classes/id's will override any type of general styling from CSS unless the styling is more spesific.
+you can also add multiple classes to one element
+
+you can images easily by typing ./ after the img tag, 
+
+you can style an images inside of a div, by applying a class to a div, then in css add the file type ex img, then adding a width and height element in css, for styling
+
+when usuing text align it will always be inregards to the parent element
+
+-Note you can add a class or an id emmet by usuing the emmet tags, ex div.upcomming games or div#example
+
+
+Structuring your webpage
+think of everyhing as being in containers, main container > header > parent div > Child Divs > Footer
+it helps to create easer to manage projects and chunk things into more manageable parts.
+
+apply an id to your main container ex container or main, 
+afterwards you can then apply such things as with, or margins, to center it relative to the viewer, use margin: 0px auto; to apply a border, use border: 2px solid then a color if youd like
+
+
+Box Model
+you can use a unversal selector by usuing the * sign, it will select everything? 
+Margin-Margin is space outside of the content
+Padding- Padding is space inside of the content, the numbers are minipulated to adjust the dimensions of elements inside of the content
+
+if we want to keep the integerety of the image size but add margin and padding then youl use box sizing and it will adjust the image to take in account of the pixles added from the
+margin and padding. 
+
+
+Inline, Block & Inline-Block
+
+Block Elements-takes up the whole width of the page, ex background colors will be the full width of the page
+Inline Elements-only takes up as much space as it needs, and wont expend past that ex images
+Inline-Block Elements- use display: inline-block; 
+
+
+Cool Links
+Color Pallet Generator, 
+
+Fonts.Google-Be sure to add the link into the header and then into the CSS code, it has links at the base
+
+
+how to change the spesific color of a word, use a span tag, 
+
+box shadows-link-Super Cool
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow

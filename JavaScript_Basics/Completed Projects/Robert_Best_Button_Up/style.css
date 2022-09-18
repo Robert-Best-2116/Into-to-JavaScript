@@ -1,0 +1,26 @@
+
+
+.button1 {
+    
+    border-color: rgb(70,177,179);
+    background-color: rgb(245,245,245);
+    color:rgb(70,177,179);
+    border-radius: 25px;
+    margin-bottom: 5px;
+
+}
+
+.button2 {
+    background-color: lightseagreen;
+    color: antiquewhite;
+    border-radius: 50%;
+    border: 0px;
+    margin-bottom: 5px;
+}
+
+.button3 {
+    border-color: black;
+    background-color:dodgerblue;
+    color: white;
+    box-shadow: 3px 3px black;
+}

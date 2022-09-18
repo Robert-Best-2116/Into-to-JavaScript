@@ -1,0 +1,166 @@
+
+
+Colors
+
+    Colors can be set usuing a few diffrent methods, we have the option to use named colors from inside of our program, we can use the RGB code if we choose, 
+    or we can use the hexamdecimal 
+
+    color:your_color_here; changes the color of the text
+
+    background-color:your_color_here; changes the background color of the text, background color can be appplied to multiple elements such 
+    as body div thread etc, not soly the ones containing text. 
+
+
+
+Text Aligment
+
+    adjust aliment usuing the following tags? 
+
+        text-align: left;
+
+        text-align: center;
+
+        text-align: right;
+
+
+
+Text Decoration
+
+    Apply text Decoration
+
+        text-decoration: underline:
+
+        text-decoration: line through:
+
+        text-decoration: none;
+
+        font-style: italic;
+
+        font-style: normal;
+
+        font-weight: normal;
+
+        font-weight: light;
+
+        font-weight: bold;
+
+            -font-weight notes- font-weight also accepts number values, 100, 200, 300, 400, 500, 600, 700, 800, 900.
+                font-weight will only be applyed if the font-family has values for it
+
+
+
+
+Font Family (chaning the style of the font)
+
+    font-family: serif;
+
+    font-family: sans-serif;
+
+    font-family: monospace;
+
+    font-family: cursive;
+
+
+
+Width and Height
+
+    when adjusting width and height you have two options you can use pixles-px or a percentage % when working with static content
+    usuing the px as the page you are working on will not change in size, when working with a responsive design you will use %
+
+    
+    {width: 25px;}
+
+    {height: 25px;}
+
+    {width: 100%;}
+
+    {height: 200%;}
+
+        -Note- when you want your element to resize ex: an image, you can size just one property(width or height) and the other will adjust
+        appropriately to keep the relative dimensions of the image.
+
+
+
+Font Size
+
+    Font size property values can be expressed in four diffrent units, pt, px, em, %. pt and px (point and pixle) are static size 
+    values and will not adjust when the page is resized. em and % (responice measure and percent) are relative and will resize when 
+    and adjust to the page adjustment. they are reccomended by most developers. 
+
+
+        tag {font-size: 10pt;}
+
+        tag {font-size: 14px}
+
+        tag {font-size: 1.2em;}
+
+        tag {font-size: 80%;}
+
+
+
+Overflow
+
+    This property determines what happens when the content inside of a container is larger than the container size
+    you can set the container to hide the additional information, show the inromation no matter what, or have a scroll bar
+    added to the element so the content is still visabile. 
+
+        tag {overflow: visible} default setting-content is not clipped, content renders outside the element box
+
+        tag {overflow: hidden} overflow is clipped, the rest of the content will be invisible
+
+        tag {overflow: auto} similar to scroll but adds scrollbars only when necessary
+        
+        tag {overflow: scroll;}
+
+
+
+Background
+
+    The background property can modify the background of an element all in one line, its shorter than splitting each
+    property on its own line of code, color can be defined by usuing hex, rgb or semantic code. 
+
+        tag {background #ffffff}
+
+
+
+Adjusting Background Properties
+
+
+    The background can be adjusted by type ex, background, background-color, background-size, background-image, background-repeat
+
+
+        CSS Code Example
+
+            tag {background-color: blue;}
+   
+  
+            {background-image: url("cherries.png");
+            background-position: center;
+            background-size: auto;
+            background-repeat: no-repeat;}
+
+
+
+
+Changing Borders
+    This property adjusts all the border elements in one line, when adjusting values, such as the width, style and color, the values are represented after the size of the border ex: 2px groove rgb(100,100,100) first value is width, second is style, third is color.
+
+        tag {border: 2px dotted green;} 
+
+    You can adjust each part of the border individually ex: top, bottom, left, right
+
+
+        tag {border-top: 1px}
+
+
+    You can also adjust the border to have a rounded apperance, the values are set with px or %
+
+        tag {border-radius: 5px}
+
+
+Adding Shadow Boxes
+
+                 color if desired
+
+
+

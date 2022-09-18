@@ -1,0 +1,28 @@
+
+
+
+CSS Resets & why there important. 
+    Diffrent browsers many give default attributes to HTML elements, causing them to look diffrent based on the verson of the browser your on or which browser your on. ex internet exploer has diffrent margins for the h1 tag than chrome and firefox. which would cause a massive pain in the ass for getting your project to loo kthe same through diffrent browsers and versions. to fix this issue its reccomend to use reset and normalize to define what the default attirubutes should be instead of relying upon the default values that come with the browsers. how to do this is an important question that technical requriters love to ask about. to see if you know how to make a sight look consistant throughout diffrent browsers. you should be able to explain this with confidence what reset/normalise means and when and why they should be used. you should also tell them that its important t ovaladate your html/css often as it will often highlight issues that may lead to cross-browser compatabaility issues. 
+
+    the simplest resets that web developers use is to simply zero out the margin and padding for all visible elements on the page. which will make our designs consisent from one browser to another and allow us to then specify padding and margin o nthe elements where they will be nessisary. 
+
+        ex  CSS
+            * {
+            padding: 0;
+            margin: 0;
+            }
+
+        Link for more information and ways to CSS Reset
+            https://perishablepress.com/a-killer-collection-of-global-css-reset-styles/
+
+            
+
+
+Position Basics!!!!! this is fun
+
+    the position property used in CSS alows you to move the position of an object, like a pop up or other container,
+        Position: absoulte; puts it at a very spesific place on the webpage, not reccomended,
+        position: fixed; keeps it fixed at a relative positon at the bottom or top of the screen regardless of scroll
+        Position: relative; not very reccomended there are usually better ways to do this. 
+
+        with thease tags youl use the top, bottom, left, right, tags. and pixles to locate them. 
