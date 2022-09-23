@@ -537,3 +537,65 @@ lecture 9/15
 
 
 
+Lecture 9/20
+
+
+    curly brackets mean its an object!!
+    we can affect a source dirrectley in js, by targeting directley, we are going to want to apply a class or a id to the div containing the image, or on the image tag its self, then we can apply a query select the function. or by doing a create element
+
+    if we want to change the image, we wont be able to target it inside of the function. we will need to target it outside of the function. 
+
+    Quality youtubers 
+        web dev simplifed. -gerneral use
+        corey shafer -python specialist
+        kevin powell - biggg into the CSS!!
+
+
+
+    Into to bootstrap, sadface death to raw CSS 
+
+        you can apply a class in html by simply wrigintg .container or whatever you want as the class.you can add mulitple bootstrap classes in one 
+        uhh " " those 
+
+        you can do three items or more with the * button and what youd be wriging, need to test out to see it better. 
+
+        when hardcoding css its wise to use a bootstrap style approach to classes labeling them as what you want them to do. ie nav bar, profile picture, container but thats not a hard and fast rule. 
+
+        bootstrap has its limitatations, the colors etc are basic and everything will look the same. 
+        when linking bootstrap to your site, link bootstrap first then your CSS 
+
+
+
+Lecture 9/21 -J Query
+
+    https://code.visualstudio.com/docs/editor/userdefinedsnippets
+
+    code snippets!!
+
+    https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode
+
+    write your own code snippets!
+
+    link the script file in after you link in the j query. 
+
+    jquery has pretty good documentation. 
+
+    it usualy has a getter and a setter for the CSS, meaning it pulls information/properties from css and also sets properties to css 
+
+    document.querySelectorAll will target all of the variables with the same name, and will put it in an array. even if there is only one of them. in vanella javascript. when you query select all, you have to loop through an array. to modify them with event listeners. or functions. 
+
+
+
+Lecture 9/22-Office Hours
+
+    consider creating a google docs for my note taking in additon to the vs code beings that i can put photos into it. 
+
+    create a html and css basic template in order to streamline the creation of everything. 
+
+Lecture
+
+    deleating reposatory in git on your computer, command
+        ls -a to see folders
+        rm -fr .git 
+
+        removes the git folder. 

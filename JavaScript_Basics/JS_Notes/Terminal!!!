@@ -1,0 +1,41 @@
+
+
+Git and you! (the terminal first)
+
+    Basic Commands!!! 
+
+        pwd-present working directory, this command shows you where you currentley are in your file strucutre you can also use cd
+
+        ls- lists files, it helps by showing you all the directories and files that are in the current directory your in
+
+        ls -1 just a long form version of list files. 
+
+        ls -a shows all files including hidden files. 
+
+        cd. -changes to the current directory, ? shitty explanation on this one. i think it means go back because ct means go forward
+
+        cd .. means go to the parent directory of the current folder. so it goes back up one. 
+
+        cd 'folder name' -in gitbash you neeed to use the '' to target the folder, took me a minute to figure that out
+
+        mkdir 'new folder name' -not sure if i need to add the _ in this but its supposed to make a new folder with the same name. 
+
+        rm directory_name - removes an empty folder guessing that its not going to need the _ because git dident requre it. and itll probabley need the ''
+
+        rm -rf directory - this one deleates an non empty folder/directory, itll wipe everything in the folder so be super carefull with its use. 
+
+        touch index.html or touch style.css - ccreates a new empty file with the name and extention type that i spesficy. good idea to run ls afterwards because itll let you know if you were sucessfull. 
+
+        mv index.html new_name_index.html -is supposed to rename the file. dident have much luck the first time just need to work with it more
+
+        mv index.html ../file you want it moved to.html -it moves it up one directory with the same name, also needs to be fucked with
+
+        cp index.html copy.html - copys a file in the current directory with the new name i privded. (second half)
+
+        cp -rf directory_name copys name -copys an entire directory, and the internal componets, which is why it needs the rf funcion. 
+
+        open . will open your current directory in the grapics user interface, only on the computer your on. 
+
+        git status -god mode emote there. tells you what files are about to be updated and when theve been uploaded. super smart to run for your commits. 
+
+        sudo -means your the super user. forces the applicaton to do what you want it to do in the cloud when your navagaitng the terminal in super space. 
